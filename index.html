@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikkat Dağınıklığı Testi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .baslik{
+            text-align: center;
+            background-color: #d0d0ff;
+            margin-top: 100px;
+        }
+        .paragraf{
+            margin-top: 15px;
+            text-align: start; 
+            text-indent:100px;
+        }
+    </style>
+</head>
+<body onload="onLoad()">
+    <div style="position:sticky;top: 1px;left: 10px;">
+        <div class="container " style="background-color: bisque;">
+        <div class="row">
+            <div class="col d-flex justify-content-center" style="border:#008003 2px solid">
+                <iframe  style="display: none;" id="sound"></iframe>
+                <div class="">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" id="selectbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Lütfen Dikkat Dağınıklığı İçin Bir Müzik Seçiniz.
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="ClickSes(1)">Ses 1</a></li>
+                            <li><a class="dropdown-item" onclick="ClickSes(2)">Ses 2</a></li>
+                            <li><a class="dropdown-item" onclick="ClickSes(3)">Ses 3</a></li>
+                            <li><a class="dropdown-item" onclick="ClickSes(4)">Ses 4</a></li>
+                            <li><a class="dropdown-item"  onclick="ClickSes(5)">Ses 5</a></li>
+                            <li><a class="dropdown-item" onclick="ClickSes(6)">Ses 6</a></li>
+                            <li><a class="dropdown-item" onclick="ClickSes(7)">Ses 7</a></li>
+                        </ul>
+                      </div>
+                    <button type="button" style="width: 700px;" onclick="ClickTelefonSayac()" class="btn btn-info">Telefona Her Baktığınızda Buraya Lütfen Tıklayın.</button>
+                  <p class="text-center">Okumaya Başladığınızdan Beri Telefonunuza  <span id="sayac"></span> </p>
+               
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="myyazi" >
+    <div class="container">
+    <div class="row">
+    <div  class="col ">
+        <h3 style="text-align: center;color: #008003;">DİKKAT EKSİKLİĞİ HİPERAKTİVİTE BOZUKLUĞU <br>
+            ve <br>
+            ÖZGÜL ÖĞRENME GÜÇLÜĞÜ 
+        </h3>
+
+        <p   style="text-align: center;color: #008003;">HAZIRLAYANLAR: <br><br>
+            Doç.Dr.Pınar Öner <br>
+            Prof.Dr.Ayla Soykan Aysev <br>
+            Uzm.Pskl. İlkiz Altınoğlu Dikmeer <br>
+        </p>
+        <h2 style="text-align: center;color: #ffb3b3;">DİKKAT EKSİKLİĞİ HİPERAKTİVİTE BOZUKLUĞU </h2>
+        <h1  class="baslik" >Nedir? </h1><br>
+        <img class="img-fluid float-end" src="images/imgone.png">
+        <p class="paragraf"> 
+            Dikkat eksikliği Hiperaktivite Bozukluğu (DEHB) okul öncesi dönem ve okul çağı çocuklarında belirgin hale gelen 
+            bir bozukluktur. Çocuğun 	davranışlarını 	kontrol  * etmesi ve dikkatini vermesinde sorun vardır. “Bir türlü yerinde 
+            durmayan,” “hayallere dalan”, “düşünmeden davranan”, “dalgın, unutkan” …vs. gibi pek çok sıfatla nitelendirilen 
+            çocuklardır. Bu davranışlar çoğu çocukta zaman zaman görülebilen durumlar olduğundan tanı konulması için yeterli 
+            deneyim ve bilgi birikimi sahibi uzmanların yardımı gerekir. Sanıldığından daha sıktır, % 4-8 gibi bir oranda 
+            görülmektedir; bu da 25-30 kişilik bir sınıfta en az 1-2 DEHB olan çocuk görülebileceği anlamına gelmektedir. 
+            Toplum tarafından yeni tanınmaya başlayan bir durum olmasına rağmen aslında uzun zamandan beri bilinmekte ve 
+            her sene hakkında yüzlerce araştırma yayınlanmaktadır.
+         </p>   
+         <p class="paragraf"></p>
+            İlk kez 1845 yılında Dr. Henrich Hoffman isimli bir hekim 
+            tarafından tanımlanmış olmasına rağmen yine bir hekim olan Sir George F. Stil 1902’de yeniden bu bozukluğu vurgulayana
+             dek hak ettiği ilgiyi görememiştir. Ancak bu tarihten sonra bu bozukluğun özelliklerini, nedenlerini, seyrini, 
+             tedavilerini araştıran çalışmalar hız kazanmıştır. Günümüzde artık şu rahatlıkla söylenilebilir ki: DEHB anne-babanın
+              yetiştirme biçimlerinin doğrudan sonucu olmayan, kalıtsal özelliklerin ağır bastığı, hakkında oldukça bilgi sahibi 
+              olduğumuz bir rahatsızlıktır.  
+        </p>
+        <h1 class=" baslik" >Çocuğunuz çok hareketli olmasa da DEHB olabilir mi? </h1>
+        <p class="paragraf">
+            “Hiperaktivite”, aşırı hareketlilik anlamına gelmektedir; ancak bu terim DEHB olan çocukların tümünü iyi a
+            nlatan bir terim değildir, çünkü hiperaktivite olmadan da DEHB olabilir. Bazı çocuklarda en belirgin şikayet 
+            dikkat süresinin çok kısa olmasıdır. Yani DEHB olan çocukların bir kısmında aşırı hareketlilik ve dürtüsellik 
+            ile ilgili belirtiler ön plandayken bir kısmında dikkatsizlik ile ilgili şikayetler ön plandadır. 
+            Önemli bir kısmında ise her iki gruptan şikayetler bir arada görülür.                      
+        <br>* Dr. Heinrich Hoffman, “Rahat Duramayan Philip’in Hikayesi” adlı kitabından alıntı 
+            
+        </p>
+        <h1  class=" baslik">Belirtileri nelerdir? </h1>
+        <p class="paragraf">
+            Tablo’ya bakıldığında, Dikkat Eksikliği Hiperaktivite bozukluğu bir çok çocukta normalde görülebilecek belirtileri 
+            içerir, ancak tanıyı koyarken bunların sayısı, süresi ve çocuğun hayatını ne ölçüde olumsuz etkilediği önemlidir. 
+            Tanı için çocukta bu iki gruptan birinde ya da her ikisinde yer alan belirtilerin en az 2/3’si bulunmalıdır. 
+            Ayrıca, belirtilerin 7 yaşından önce başlamış olması ve en az iki farklı ortamda sorun yaratıyor olması gerekir. 
+        </p>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h1 style="background-color: aqua;">Hiperaktivite belirtileri </h1>
+                <p class="text-start" >
+                    <ul>
+                        <li> Yerinde duramazlar </li>
+                        <li>Oturması gerektiği halde oturamazlar</li>
+                        <li>Sessiz sakin oyun oynamakta güçlük çekerler</li>
+                        <li>Yerli yersiz koşup tırmanırlar</li>
+                        <li>Çok konuşurlar</li>
+                        <li>Çoğu zaman sorulan soru tamamlanmadan cevabını yapıştırırlar</li>
+                        <li>Her zaman bir şeylerle uğraşırlar</li>
+                        <li>Sırasını beklemekte zorlanırlar</li>
+                        <li> Olaylara veya konuşmalara müdahale edip yarıda keserler </li>
+                    </ul>
+               </p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h1 style="background-color: aqua;">Dikkatsizlik belirtileri </h1>
+                <p  class="text-start" >
+                    <ul>
+                        <li>Yönergeleri başından sonuna  kadar takip edemezler </li>
+                        <li> Dikkatlerini yaptığı işe veya oyuna vermekte zorlanırlar</li>
+                        <li>Evde veya okulda yapacağı işler  ve aktiviteler için gereken  malzemeleri kaybederler</li>
+                        <li> Siz konuşurken dinlemez gibi  görünürler</li>
+                        <li>Detayları gözden kaçırırlar</li>
+                        <li>Düzensiz görünürler</li>
+                        <li> Uzun süre zihinsel çaba gerektiren  işleri yapmakta zorlanırlar ve bunlardan kaçınırlar</li>
+                        <li> Unutkandırlar  </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <h1 class="baslik">Tanısı nasıl konur?  </h1>
+        <img class="img-fluid float-end"  src="images/imgtwo.png">
+
+        <p class="paragraf">
+            Tanı konulması aşaması ayrıntılı bilgi alınması ile başlar, anne-babadan, öğretmenden, çocuğun kendisinden ve
+             olabildiğince çok bilgi kaynağından bilgi elde edinilmeye çalışılır. Aileler çoğu zaman okul öncesi dönemde 
+             dikkatsizlik, aşırı hareketlilik, dürtüsellik belirtilerini gözlemlerler ancak genellikle tanı, çocuğun okula 
+             başlamasından sonra konulur. Aile içinde ve erken dönemde sorun yaratmasa da okul gibi yapılandırılmış, kurallı 
+             ve kalabalık bir ortamda belirtiler belirgin hale gelir. Öğretmenler çok sayıda çocukla çalıştıkları için dikkat 
+             ve kendini-kontrol edebilmeyi gerektiren sınıf ortamında “ortalama” bir çocuğun davranışlarına aşinadırlar. 
+             Hiperaktivite ve dürtüsellik ile ilgili belirtileri daha çabuk fark edebilirler. Ancak bazen sadece 
+             “dikkat eksikliği” olan çocuklar, özellikle de uysal ve uyumlu bir çocuksa, gözlerinden kaçabilmektedir. 
+            
+            
+        </p> <img class="img-fluid float-start "  src="images/imgthree.png">
+        <p class="paragraf">
+            Daha 	sonraki 	aşama 	çocuğa 	hekim tarafından fizik muayene yapılmasıdır; ayrıntılı bir fizik muayene, 
+            işitme ve görme ile ilgili sorunlar da dahil karışabilecek diğer tıbbi nedenlerin anlaşılmasını 	
+            sağlayacaktır.
+            Ayrıca 	çocukta örneğin motor becerilerde sorun olması gibi sinir 
+            sistemine ait gelişimsel gecikmeler ile ilgili bulgular varsa bunların erken dönemde tanınmasını da kolaylaştıracaktır.
+            DEHB ile ilişkili olabilecek genetik sendromları ortaya çıkaracaktır. 
+        </p>
+        <p class="paragraf"> 
+            Çocuğun davranışlarının gözlenmesi de önemli olan bir diğer basamaktır. Ancak her ne kadar bazı çocuklarda 
+            DEHB belirtileri dört dörtlük gözlemlenebilir olsa da çoğu zaman bu mümkün değildir. Çocuk birebir görüşme 
+            esnasında ve daha önce hiç karşılaşmamış olduğu bir ortamda, okulda ya da evde olduğundan farklı olabilir.  
+            Günümüzde DEHB tanısına yardımcı olacak herhangi bir laboratuar testi (kan testleri, idrar testleri, EEG...vs), 
+            beyin görüntüleme yöntemi (beyin tomografisi, magnetik rezonans görüntüleme...vs) ya da psikolojik test yoktur. 
+            Yani DEHB olan bir çocuk ile DEHB olmayan bir çocuk arasında bu testlerin istenme nedenleri açısından bir fark bulunmamaktadır.              
+        </p>
+
+        <h1 class="baslik">DEHB’nin nedenleri nelerdir? </h1>
+        <p class="paragraf">
+            DEHB’ye geçmişte “minimal beyin hasarı”, “postensefalitik bozukluk” gibi isimler takılmış da olsa bu çocukların 
+            beyinlerinde günümüzdeki beyin görüntüleme yöntemleriyle özgül, tanı koyduran bir anatomik bir bulgu henüz 
+            saptanamamıştır. Saptanabilen belirgin anatomik değişiklikler olmaması, daha hafif ama önemli biyolojik değişiklikler 
+            olmadığı anlamına gelmez. Daha yüksek çözünürlükteki  beyin görüntüleme araçlarının yapılması, gelecekte bu sorunu çözecektir.  
+        </p>
+        <p class="paragraf">
+            Yakın zamandaki araştırmalar beynin kimyasal yapısındaki sorunların üzerinde durmaktadır. Beyinde mesajların iletimini
+             sağlayan dopamin, serotonin, norepinefrin gibi maddelerle ilgili araştırmalar halen devam etmektedir. 
+        </p>
+        <p class="paragraf">   
+             DEHB tanısı alan çocukların birinci dereceden akrabalarının % 25’inde de aynı problem karşımıza çıkar (genel toplumdaki
+             sıklığın %4-8 olduğunu anımsarsak, riskin yaklaşık 5 kat arttığı anlamına gelmektedir). Bu da kalıtsal faktörlerin 
+             önemli olduğunu göstermektedir. Yine de kalıtsal faktörler DEHB’yi tamamen açıklamaz.  
+        </p>
+        <h1 class="baslik">Peki neden bazı çocuklarda DEHB gelişirken diğerlerinde gelişmez?<br>
+            DEHB’nun ortaya çıkışını kolaylaştırdığı düşünülen çevresel faktörler: </h1>
+
+        <div class="row ">
+            <div class="col-12 col-lg-6 ">
+                <h1 style="background-color: aqua;">Gebelik esnasındaki <br> faktörler:  </h1>
+                <p class="text-start" >
+                    <ul>
+                        <li> Alkol kullanımı </li>
+                        <li>İlaç kullanımı </li>
+                        <li>Kötü beslenme</li>
+                        <li>Sigara kullanımı</li>
+                        <li>Kimyasal zehirler (ör: kurşun)</li>
+                        <li>Çoğul gebelik </li>
+                    </ul>            
+               </p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h1 style="background-color: aqua;">Doğum ve Doğumdan sonraki faktörler: </h1>
+                <p  class="text-start" >
+                    <ul>
+                        <li> Zor doğum, doğum esnasında ya da sonrasında yaşanan tıbbi sorunlar</li>                        
+                        <li>Erken doğum </li>                        
+                        <li> Düşük doğum ağırlığı</li>                        
+                        <li>Merkezi sinir sistemi İnfeksiyonları</li>                        
+                        <li>Demir eksikliği</li>                        
+                        <li>Kimyasal zehirler (ör: kurşun)</li>                        
+                    </ul>           
+                </p>
+            </div>
+        </div>
+
+        <p class="paragraf">
+            Yakın zamanda yapılmış çalışmalardan elde edilen veriler : 
+            <ul>
+                <li>DEHB olan çocuklarda toplam beyin hacminin % 5 kadar daha küçük oldukları anlaşılmıştır. </li>
+                <li>Takip çalışmalarına göre bu çocukların beyin büyüklüğü ve olgunlaşmasında normal çocukları geriden takip ettikleri ve ergenlik döneminde bazı çocuklarda aradaki bahsedilen farkın kapandığı düşünülmektedir.                </li>
+                <li>Araştırmacılar beynin, sorunları çözmemize, karşımızdakinin davranışlarını anlayıp değerlendirmemize, plan yapabilmemize ve isteklerimizi erteleyebilmemize yarayan bölgesi (frontal loblar) ve diğer bazı bölgelerindeki küçüklüğün daha belirgin olduğunu saptamışlardır.                  </li>
+                <li>Tedavi görmüş DEHB olan çocuklarla tedavi almamış olanlar karşılaştırıldığında, tedavi alanlarda hacim azalmasının düzeldiği ancak almayanlarda anormalliğin devam ettiği gösterilmiştir.                 </li>
+                <li>DEHB olan çocukların kardeşlerinde de beynin bazı bölgelerinde benzer ama daha hafif değişiklerin olduğu gösterilmiştir                 </li>
+                <li>2002 yılında başlayan ve 152 DEHB’li erkek çocuk ile 139 normal çocuğun karşılaştırmalı olarak takip edildikleri, halen devam eden çalışma, son derece değerli veriler sağlamaktadır.                 </li>
+                <li>Yeni yöntemler kullanarak daha ayrıntılı inceleme yapabilmeye imkan veren çalışmaların sayısı günümüzde de artmaya devam etmektedir                 </li>
+            </ul>
+            </p>
+            <p class="paragraf" >
+        Sonuç olarak, DEHB’nin ev ortamı, yetiştirme biçimi gibi nedenlerden değil diğer nedenlerden kaynaklandığını kanıtlayan çok sayıda bulgu vardır. Bu, ailenin kendini suçlamaması açısından oldukça önemli bir noktadır.  
+        </p>
+        <div class="row d-flex justify-content-center align-items-center">
+            <div  class="col-12 col-lg-6 d-flex justify-content-center"><img src="images/imgfive.png"  class="img-fluid "></div>
+            <div class="col-12 col-lg-6 d-flex justify-content-center"><img src="images/imgfour.png"  class="img-fluid float-lg-end "></div>
+        </div>
+        
+        
+        <h1 class="baslik">DEHB hangi durumlar ile karıştırılabilir? </h1>
+        <p class="paragraf">
+            Yanlışlıkla DEHB zannedilebilecek bir çok durum vardır: görme ve işitme bozuklukları, kötü beslenme, akut ve kronik fiziksel hastalıklar (ör: astım) gibi durumlar sıklıkla sonradan gelişen dikkat sorunlarına yol açarlar.
+        </p>
+            <p class="paragraf">
+                Bazı nöbet tipleri (özellikle “absans” epilepsi adı verilen bir epilepsi çeşidinde yer alan dalma nöbetleri) aileler ve öğretmenler tarafından yanlışlıkla DEHB zannedilebilir.  
+            </p>
+            <p class="paragraf">
+                Uyku Bozukluklarına bağlı olarak yetersiz uyku, çocuk gün içinde uyuklayacağı ve dikkatini toplamakta güçlükleri olacağı için DEHB ile karıştırılabilir. 
+
+            </p>
+            <p class="paragraf">
+                Kafa travması sonrasında da DEHB belirtileri gelişebilir; özellikle 7 yaşından sonradan gelişen DEHB varsa bu ihtimal akla getirilir.  
+
+            </p>
+            <p class="paragraf">
+                Fenobarbital, karbamazepin, antiastmatik ilaçlar (ör: teofilin) gibi bir çok ilaç çocuğun dikkat ile ilişkili beyin işlevlerini olumsuz etkileyip karşımıza DEHB belirtileri ile çıkabilir. 
+
+            </p>
+            <p class="paragraf">
+                Ayrıca bazı psikiyatrik bozukluklarla DEHB belirtileri sıklıkla 
+
+            </p>
+            <p class="paragraf">
+                Uyku Bozukluklarına bağlı olarak yetersiz uyku, çocuk gün içinde uyuklayacağı ve dikkatini toplamakta güçlükleri olacağı için DEHB ile karıştırılabilir. 
+                karıştırılabilir:  
+                Çocuklarda 	Depresyon 	kendisini 	huzursuzluk, 	hırçınlık, hiperaktivite, dikkat sorunları gibi erişkinlerden farklı belirtilerle seyredebilir ve bu nedenle DEHB kliniğini taklit edebilir. 
+                 Kaygı (anksiyete) Bozukluklarında görülen tedirginlik, yerinde duramama gibi belirtiler bazen DEHB ile karıştırılabilir. 
+                 
+            </p>
+            <p class="paragraf">Özgül Öğrenme Güçlüğü ya da Zihinsel Gelişme 
+                Gerilikleri de karışabilecek diğer önemli durumlardır. Sadece okulda dikkat sorunları varsa ve beraberinde okul başarısızlığı öyküsü varsa bu ihtimal akla gelmelidir; öğretmenler çocuğun öğrenme zorluklarına bağlı sorunlarını sıklıkla “dikkat eksikliği” ile karıştırabilmektedirler. 
+                
+            </p>
+            <h1 class="baslik">DEHB ile beraber sık görülen durumlar nelerdir? </h1>
+
+            <p class="paragraf">DEHB olan çocuklar diğer bazı bozuklukların gelişmesi ya da beraber görülmesi için artmış risk taşırlar: 
+                <ul>
+                    <li>Davranım Bozukluğu</li>
+                    <li>Depresyon </li>
+                    <li>Anksiyete Bozuklukları (takıntılar, korkular, kaygılar,…)</li>
+                    <li>Gelişimsel (ör: motor becerilerinde) gecikmeler  </li>
+                    <li>Öğrenme Güçlükleri (okuma, yazılı-anlatım , matematik, karma) </li>
+                    <li>Tourette Bozukluğu ve diğer Tik Bozuklukları </li>
+                    <li>Bipolar Affektif Bozukluk ? (çocukluk döneminde tanısı henüz tartışmalıdır) </li>
+                    <li>Enürezis Nokturna (gece altını ıslatma)</li>
+                </ul>
+            </p>
+            <p class="paragraf">Bu bozukluklar DEHB olan çocukların 2/3’sinde gözlenebilir. Bu nedenle tanı konulur konulmaz 
+                bu yöndeki değerlendirmelerin yapılması, eşzamanlı diğer bozuklukların da araştırılması gerekir. 
+            </p>
+            <div class="d-flex justify-content-center">
+            <img class="img-fluid " src="images/imgsix.png">
+        </div>
+            <p class="paragraf">
+                DEHB olan çocuklarda en iyi tedavi yaklaşımını belirlemek için ayrıntılı bilgi almak, çok kaynaktan bilgi toplamak,
+                 ailenin ve çocuğun özelliklerinin belirlenmesi şarttır. Her çocuk birbirinden farklı olduğu gibi her DEHB olgusu
+                  da birbirinden farklıdır. Bu farklılıkları da göz önüne alan tedavi yaklaşımları uygulanır. Takip eden uzmana 
+                  bu konuda yardımcı olmanız, öğrenciniz için üreteceği çözümlerin daha yaratıcı ve çocuğa özel olmasını sağlayacaktır.
+            </p>
+            <h1 class="baslik">
+                DEHB bulunan çocukların anne-babaları için  
+                Dr. Russel Barkley tarafından önerilen 10 kural:  
+            </h1>
+            <p class="paragraf">
+                <ol>
+                    <li>Kurallar koyduğunuz zaman bunların çok spesifik olmasına dikkat edin ve onları yazıp asın </li>
+                    <li>Ödülleriniz çocuk için anlamlı ve güçlü ödüller olsun</li>
+                    <li>Sık sık geri bildirim verin, çocuğunuza onun ne yaptığının farkında olduğunuzu gösterin </li>
+                    <li>Çocuğunuza beklentileri ve planları konusunda yardım edin </li>
+                    <li>Çocuğunuzun iyi günleri olabileceği gibi kötü günleri de olabileceğini göz önünde bulundurun</li>
+                    <li>Olumsuzluklar, yapamadığı şeyler ve cezalar hakkında odaklanmaktan ziyade olumlular üzerinde odaklanın</li>
+                    <li>Bir karakter sorunuyla değil biyolojik bir sorunla mücadele etmekte olduğunuzu daima akılda tutun</li>
+                    <li>Çok konuşup nasihat vermeyin, davranışlarınız daha öğretici olacaktır </li>
+                    <li>Espiri anlayışınızı kaybetmeyin ve sabırlı olun </li>
+                    <li>Kendiniz ve çocuğunuza karşı hoşgörülü olun. Bu işte birliktesiniz ve elinizden geleni yapıyorsunuz</li>
+                </ol>
+            </p>
+            <h1 class="baslik"> 
+                DEHB’na sıklıkla eşlik eden diğer bir bozukluk:<br> 
+                ÖZGÜL ÖĞRENME GÜÇLÜĞÜ                
+            </h1>
+            <div class="d-flex justify-content-center">
+                <img class="img-fluid "  src="images/imgheadre.png">
+            </div>
+            <p class="paragraf">
+                Özgül öğrenme güçlüğü (ÖÖG), bireylerin standart testlerde, okuma, yazma ya da matematik alanında yaş, 
+                zekâ ve eğitim düzeylerine göre beklenenin önemli ölçüde altında olmasıdır. Özgül öğrenme güçlüğü ya da
+                öğrenme bozukluğu terimi, “disleksi” (okuma alanında güçlük), “disgrafi” (yazı alanında güçlük) ya da “diskalkuli”
+                 (matematik alanında güçlük) olarak da bilinen terimlerin hepsini içinde barındırmaktadır.
+            </p>
+            <p class="paragraf">
+                Öğrenme, algılama, organize etme, depolama ve gerektiğinde bilgiyi göstermeyi içeren, bilginin kazanılması 
+                işlevidir. Bu tanıma göre önce bilgi beyne ulaşmalı (girdi), sonra organize edilmeli, anlaşılmalı (bütünleme),
+                 ardından depolanmalı (bellek) ve gerektiğinde dışarı verilmeli yani kullanılmalıdır (çıktı). Öğrenme sürecinde
+                  yaşanan bu aşamalardan birinde ya da birkaçında bir sorun olduğunda ÖÖG ortaya çıkar. 
+            </p>
+            <p class="paragraf">
+                ÖÖG’nin nedenleri henüz tam olarak bilinmemekle birlikte, merkezi sinir sisteminin işleyiş bozukluğundan 
+                kaynaklandığı ve yapısal olduğu düşünülmektedir. Kesinlikle zekâ geriliği değildir. ÖÖG tanısının konması için
+                 bireyin zekâ düzeyinin normal sınırlarda (ya da üzerinde) olması beklenmektedir. ÖÖG’de yaşıtları düzeyinde 
+                 okuyup yazamaması ya da matematik alanında güçlükler en belirgin özelliklerdir. Bununla beraber ÖÖG olan 
+                 bireylerin sıklıkla sağını solunu öğrenememe, okuduğunu anlamama, aktarmak istediğini iyi ifade edememe, 
+                 sıralama yapamama, zaman kavramlarını öğrenememe gibi güçlükler yaşadıkları da görülmektedir. Aynı zamanda 
+                 bu sorunun etkileri, yaşamın tüm alanlarında da gözlemlenebilir. Çocukların sosyal ve sportif etkinliklere 
+                 katılmalarını, arkadaş ve aile içi ilişkilerini sağlıklı sürdürebilmelerini bütünüyle etkilemektedir. 
+                 Yaşanılan başarısızlık ve hayal kırıklıkları zaman zaman kaygı bozuklukları ve depresyon gibi başka hastalıklara 
+                 da neden olabilir.
+            </p>
+            <p class="paragraf">
+                ÖÖG tanısı, standart testler aracılığı ile ruh sağlığı alanında çalışan uzmanlar tarafından konulmaktadır. 
+                Okul öncesi dönemde bazı belirtiler olmasına karşın, genellikle okul çağındaki çocukların %15-20’sine bu tanı 
+                konmaktadır. Dikkat Eksikliği Hiperaktivite Bozukluğu (DEHB) ile birlikte görülebilir ancak bu ikisi kesinlikle
+                 farklı bozukluklardır.  
+            </p>
+            <p class="paragraf">
+                ÖÖG yaşam boyu süren bir bozukluktur, psiko-eğitsel bir yaklaşımla ele alınmazsa kendiliğinden düzelmez.
+                 Sadece ÖÖG’ye özgü ilaç tedavisi ya da özel bir diyeti yoktur. Yaş ilerledikçe bireyler güçlüklerinin
+                  farkında olup kendilerine öğrenme stratejileri geliştirir ve yaşamlarını kolaylaştırabilirler.  
+            </p>
+            <h1 class="baslik">ÖÖG olan çocukların özellikleri </h1>
+            <ol style="list-style-type: upper-roman">
+                <li>Okuma / yazma alanında </li>
+                    <ul>
+                        <li>Okurken ya da yazarken harflerin ya da sayıların yönünü ters yazma, kelimeleri sondan başa doğru,
+                             sanki aynadan görüyormuş gibi yazma </li>
+                        <li>Kelimeleri tersten okuyup yazma (ev yerine ve) </li>
+                        <li>Harf atlayarak, kelimeyi eksik yazma, noktalı ve noktasız harfleri yanlış yazma </li>
+                        <li>Okurken ya da yazarken harf karıştırma (b yerine d) </li>
+                        <li>Okurken sıklıkla bulunduğu yeri kaybetme ya da satır atlama  </li>
+                        <li>Yazı yazarken çok çabuk yorulma </li>
+                    </ul>
+                <li>Matematik Alanında   </li>
+                    <ul>
+                        <li>Sayıları ve matematik sembollerini öğrenememe</li>
+                        <li>Basit işlemleri öğrenememe </li>
+                        <li>Problemi anlayıp işleme geçirmede güçlük </li>
+                        <li>Çarpım tablosunu ezberleyememe </li>
+                    </ul>
+             
+                <li>Diğer alanlarda </li>
+                    <ul>
+                        <li>Dün / bugün / yarın kavramlarını zor öğrenme, doğru kullanamama </li>
+                        <li>Saati zor öğrenme </li>
+                        <li>Sağını solunu öğrenememe </li>
+                        <li>Alfabenin harflerini, ayları, günleri sırasıyla öğrenememe </li>
+                        <li>Yaşadığı bir olayı, seyrettiği bir filmi sırasıyla aktaramama </li>
+                        <li>Çevreyi çok iyi tanıdığı halde yön bulmada güçlük yaşama </li>
+                        <li>Masanın üzerine ya da çekmecede duran gözünün önündeki eşyayı bulamama </li>
+
+                    </ul>
+            </ol>
+            <h1 class="baslik">ÖÖG olan çocukların anne babalarına bazı öneriler </h1>
+            <p class="paragraf">
+                <ul>
+                    <li>Özgül Öğrenme Güçlüğü (ÖÖG), tembellik ya da sorumsuzluk değildir. Zekâ geriliği hiç değildir. 
+                        Çoğu zaman birlikte görülse de Dikkat Eksikliği Hiperaktivite Bozukluğundan farklı bir güçlüktür.
+                    </li>
+                    <li>Çocuğunuza ÖÖG tanısı konulduysa, bunun bir güçlük olduğunu kabul edin. “İstemediği için yapmıyor, 
+                        istese her şeyi başarır” düşüncesinden kendinizi kurtarın. 
+                    </li>
+                    <li>ÖÖG hakkında bilgi sahibi olmaya çalışın, çocuğunuzun kardeşlerine, öğretmenine ve çevrenize bu 
+                        güçlük hakkında bilgi verin. 
+                    </li>
+                    <li>Ruh sağlığı kliniklerinden, özel öğretmenlerden destek alın. Kendi başınıza bu sorunla baş etmeye 
+                        çalışmayın. Eşlik eden başka psikiyatrik sorunlar varsa, bunun için gerekli olan tedaviyi ertelemeyin.
+                    </li>
+                    <li>ÖÖG olan çocuklar belli etmeseler bile güçlüklerinin ve okuma yazma konusunda sınıftaki diğer 
+                        arkadaşlarının gerisinde olduklarının farkındadırlar ve ister inanın ister inanmayın bunun için
+                        kendilerini kötü hissetmektedirler. Bu da çoğu zaman kaçınma davranışı göstermelerine, derse katılmakta 
+                        isteksiz olmalarına, ödev yapmak istememelerine neden olmaktadır. 
+                    </li>
+                    <li>ÖÖG olan çocukların zekâları normal düzeyde ya da üzerindedir. Bu nedenle bazı alanlarda (derslerde) 
+                        başarılı olur ya da sizi şaşırtıcı kıvraklıkta cevaplar verebilirken, okuma yazma konusunda ya da kendini
+                        ifade etmede yaşının çok altında performans gösterebilirler. Bu durumun sizi şaşırtmasına ya da 
+                        öfkelendirmesine izin vermeyin. 
+                    </li>
+                    <li>ÖÖG olan birçok çocuk, sayıları tanımada, çarpım tablosunu öğrenmede, basit matematik sembollerini ayırt
+                         etmede güçlük yaşarlar. Öte yandan, ÖÖG olan çocukların bir kısmı da okuma yazmada çok kötü iken, hala 
+                         harfleri öğrenememişken, matematik alanında çok parlak olabilir. Bu, “matematiği başardığına göre istese
+                        okumayı da yapar, demek ki istemiyor, önem vermiyor” diye düşünmenize neden olabilir. Lütfen unutmayın ki,
+                         bu durum isteğe bağlı değildir.
+                    </li>
+                    <li>Çocuğunuzun öğretmeni ile işbirliği içinde olun. Bu durumun bir güçlük olduğunu açıklayın, gerekirse 
+                        ruh sağlığı uzmanınız ile görüşmelerini sağlayın, kitap, broşür gibi bilgilerle öğretmeninizi güçlendirin.
+                    </li>
+                    <li>Evde birlikte ders çalışmak ebeveyn – çocuk ilişkisini yıpratmaya başladıysa lise mezunu ya da üniversite 
+                        öğrencisi bir abla ya da ağabeyden günlük ödevleri yaptırma konusunda yardım alın.  
+                    </li>
+                    <li>İlk zamanlar çocuğunuzla birlikte ders çalışmanız, ödev yapmanız gerekebilir, ona eşlik edin, nasıl 
+                        yapacağını gösterip denetleyin ama onun yerine yapmayın. 
+                    </li>
+                    <li>Ders çalışma ortamının sessiz, düzenli olmasına, kısa sürelerle çalışıp kısa molalar vermeye özen gösterin.  </li>
+                    <li>Okuması için siz örnek olun. Evde herkesin katıldığı günlük okuma saatleri ayarlayın. İlk başlarda her 
+                    gün 10 dakikalık okuma saatleri sıkılmadan, düzenli okuma alışkanlığı sağlamasına yardımcı olur, 
+                    daha sonra süreyi yavaş yavaş arttırabilirsiniz. 
+                    </li>
+                    <li>Yüksek sesle okumasını isteyin, o okurken siz mutlaka dinleyin. </li>
+                    <li>Boş zamanlarınızda ailece hep birlikte kelime oyunları (adam asmaca, isim / şehir, kelimenin son 
+                        harfiyle başlayan yeni bir kelime türetme gibi) oynamak çocuğunuzun dikkatini arttırır, harfleri 
+                        tanımasına yardımcı olur, en önemlisi de birlikte keyifli zaman geçirmeniz ilişkinizi güçlendirir. 
+                    </li>
+                    <li>Alışverişe giderken yaptığınız listeyi çocuğunuza yazdırabilir, alışveriş sırasında listeyi eline 
+                        verip, alınanları listeden bulup işaretlemesini isteyebilirsiniz.
+                    </li>
+                
+                </ul>
+            </p>
+            <p style="font-size: smaller; font-weight: 100;">
+                    Kaynaklar:<br><br>
+                    1.	Attention Deficit Hyperactivity Disorder A detailed booklet that describes the symptoms,
+                    causes, and treatments, with information on getting help and coping, National Instute Of Mental Health, 2003.<br>
+                    2.	Castellanos FX, Lee PP, Sharp W ve ark., “Developmental Trajectories Of Brain Volume Abnormalities İn Children
+                    And Adolescents With Attention Deficit Hyperactivity Disorder”, JAMA, 2002.<br> 
+                    3.	Durston S, Hulshoff Pol HE, Schnack HG ve ark., “Magnetic Resonance İmaging Of Boys With 
+                    Attention Deficit Hyperactivity Disorder And Their Unaffected Siblings”, J Am Acad Child Adolesc Psychiatry, 2004.<br>  
+                    4.	Kieling C, Goncalves RR, Tannock R, Castellanos FX. Neurobiology of attention deficit hyperactivity disorder.
+                    Child Adolesc Psychiatr Clin N Am. 2008 Apr;17(2):285-307, viii. Review.<br> 
+                    5.	Vincent A. My brain needs glasses. Living with hyperactivity, 2004.<br> 
+                    Hazırlayanlar:<br><br>  
+                    Dr. Pınar Öner (Çocuk ve Ergen Psikiyatristi) Sami Ulus Çocuk Hastanesi / Çocuk Ergen Psikiyatrisi<br> 
+                    Dr. Ayla Soykan Aysev (Çocuk ve Ergen Psikiyatristi) AÜTF Çocuk Ergen Psikiyatrisi AD<br>  
+                    Pskl. İlkiz Altınoğlu Dikmeer (Klinik Psikolog)- AÜTF Çocuk Ergen Psikiyatrisi AD<br><br> 
+                    Bu kitapçıkta yer alan bilgiler önemli noktaları vurgulamak için bir araya getirilmiştir. Ancak, 
+                    daha ayrıntılı bilgi için lütfen uzmanınıza danışınız.<br><br> 
+                    Önerilen kitaplar:<br><br> 
+                    1.	Dikkat Eksikliği Hiperaktivite Bozukluğu Anababa-Öğretmen Elkitabı, Hazırlayan: Dr. Özlem Sürücü, Yayınevi: YA-PA Yayınları<br>  
+                    2.	Dikkat Eksikliği Hiperaktivite Bozukluğu ve Özgül Öğrenme Güçlüğü, Editör: Dr. Ayla Aysev, Ankara Üniversitesi Basımevi, 2001<br> 
+                    3.	Hiperaktif Çocuk Okulda, Editör: Dr. Yankı Yazgan<br> 
+                    4.	Dikkat Eksikliği Hiperaktivite Bozukluğu, Özellikleri - Tedavisi - Çocuklarda ve Erişkinlerdeki
+                    Belirtileri, Hazırlayanlar: Dr. Cahide Aydın, Dr. Eyüb Sabri Ercan, Gendaş Kültür<br><br> 
+                    İlgili diğer internet siteleri:<br> 
+                    •	www.cgrsder.org.tr Çocuk Gençlik Ruh Sağlığı Derneği<br>  
+                    •	www.hiperaktif.org Dikkat Eksikliği ve Hiperaktivite Derneği<br>  
+                    •	www.cocukaile.com/<br>  
+                    https://www.turkpsikiyatri.org/arsiv/adhd-brosur-anababa.pdf sitesinden alıntıdır.
+        </p>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script>
+    function onLoad(){
+        document.getElementById("sayac").innerHTML="Hiç Bakmadınız.";
+        ClickSes(mytur);
+    }
+    let i=0;
+    function ClickTelefonSayac(){
+        i++;
+        document.getElementById("sayac").innerHTML=i.toString()+" Kez Baktınız.";
+    }
+    mytur=0;
+    function ClickSes(tur){
+        mytur=tur
+        let src=""
+        document.getElementById("sound").src=src;
+        if (tur==1){
+            src="https://asoftmurmur.com/?m=pep99&autoplay=1"
+        }
+        if (tur==2){
+            src="https://asoftmurmur.com/?m=thn43fre39pep18&autoplay=1"
+        }
+        if (tur==3){
+              src="https://asoftmurmur.com/?m=wnd64brd36&autoplay=1"
+        }
+        if (tur==4){
+             src="https://asoftmurmur.com/?m=brd03pep97&autoplay=1"
+        }
+        if (tur==5){
+            src="https://asoftmurmur.com/?m=wve20brd70pep10&autoplay=1"
+        }
+        if (tur==6){
+         src="https://asoftmurmur.com/?m=rno05wve92sbo03&autoplay=1"
+        }
+        if (tur==7){
+           src="https://asoftmurmur.com/?m=thn63fre21pep16&autoplay=1"
+        }
+
+        document.getElementById("sound").src=src;
+    }
+</script>
+</body>
+</html>
+
+
